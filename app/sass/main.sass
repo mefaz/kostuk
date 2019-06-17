@@ -1,0 +1,663 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #d2f6ff
+	color: #000
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+.main-color
+	color: $grenn
+.hover-main-color
+	color: $grenn-hover
+b, strong
+	font-weight: bold
+h1, h2, h3, h4, h5
+	color: #333
+	font-weight: 700
+	font-size: 25px
+	padding: 15px 0
+	text-transform: uppercase
+	margin: 0
+	line-height: 33px
+	background-image: url(../img/border-g.png)
+	background-position: top center
+	background-size: 100% 1px
+	background-repeat: no-repeat
+	margin-top: 20px
+	span
+		font-weight: 100
+span:focus, a:focus, img:focus, h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, div:focus, p:focus
+	outline: none
+.bg-main
+	background-color: rgba(255, 255, 255, 0.7)
+	background-size: cover
+	min-width: 250px
+	.bg
+		background-color: rgba(255, 255, 255, 0.7)
+		height: 100vh
+.bg-column-1, .bg-column-2, .bg-column-3, .bg-column-4, .bg-column-news-item, .bg-column-news-menu
+	background-size: cover
+	.bg
+		background-color: rgba(255, 255, 255, 0.7)
+		height: 100vh
+.conteiner-main>.row>.col-column
+	height: 100vh
+	background-image: url(../img/border-w.png)
+	background-position: right bottom
+	background-repeat: no-repeat
+	background-size: 2px 100%
+	z-index: 1
+.conteiner-main
+	padding-right: 0px
+	padding-left: 0px
+	max-width: 1600px
+	.row
+		.ferst-column
+			max-width: 350px
+a
+	color: #404042
+	text-decoration: none
+a:hover
+	color: #0056b3 
+	text-decoration: none
+.main-btn
+	padding: 5px 10px 2px 10px
+	background: white
+	border: 1px solid red
+	border-radius: 10px
+	display: inline-block
+	transition: .2s
+	&:hover
+		border: 1px solid #404042
+		color: #404042
+
+//conteiner-main - row-logo 
+.row-logo
+	background-position: center right
+	background-size: 100% 100%
+	.box
+	 padding-left: 15px
+	 padding-right: 15px
+	p
+		font-size: 16px
+		line-height: 22px
+		color: #013336
+	a
+		font-size: 34px
+		color: #063539
+		line-height: 1
+		text-shadow: 1px 1px 2px white, 0 0 1em white
+		text-decoration: none
+	ul
+		margin: 0
+		padding: 0
+		margin-left: 10px
+	li
+		font-size: 12px
+		line-height: 15px
+		list-style-type: none
+	li:before
+		content: "\2013"
+		padding: 0 3px 0 0
+
+//conteiner-main - row-menu
+.row-menu
+	padding: 15px
+	background-image: url(../img/border-g.png)
+	background-position: center bottom
+	background-repeat: no-repeat
+	background-size: 100%
+	ul
+		display: block
+		margin: 0
+		padding: 0
+		li
+			display: block
+			margin: 0
+			padding: 0
+			border-bottom: 1px solid rgba(255, 255, 255, 0)
+			a
+				font-size: 16px
+				text-transform: uppercase	
+				font-weight: bold
+				color: #333
+		li:hover
+			background-image: url(../img/border-g.png)
+			background-position: center bottom
+			background-repeat: no-repeat
+			background-size: 100%
+			a
+				color: #01565b
+		.activ
+			background-image: url(../img/border-g.png)
+			background-position: center bottom
+			background-repeat: no-repeat
+			background-size: 100%
+			a
+				color: #01565b
+//conteiner-main - row-faq
+.row-faq
+	padding: 15px 15px 0 15px
+	background-image: url(../img/border-g.png)
+	background-position: center bottom
+	background-repeat: no-repeat
+	background-size: 100%
+	background-color: #fff
+	span
+		text-align: center
+		display: block
+		margin-top: 5px
+		font-size: 14px
+		font-weight: bold
+		padding-bottom: 15px
+	img
+		width: 35%
+		margin: auto
+	i
+	 display: none
+	div.activ
+		i
+			display: initial
+			color: #118baa
+			position: absolute
+			bottom: 0px
+			text-align: center
+			left: 0
+			width: 9px
+			background: #fff
+			height: 11px
+			margin: auto
+			right: 0
+
+.row-faq > div.ferst
+	background-image: url(../img/border-w.png)
+	background-position: right bottom
+	background-repeat: no-repeat
+	background-size: 1px 100%
+.row-action
+	padding: 15px
+	display: none
+	background: #fff
+	overflow: hidden
+.activ-action
+	display: block
+.activ-news
+	&>div
+		padding-bottom: 10px
+		ul
+			margin: 0
+			padding: 0
+			text-align: left
+			margin-bottom: 25px
+		li
+			font-size: 12px
+			line-height: 15px
+			list-style-type: none
+			&:before
+				content: "\2013"
+				padding: 0 3px 0 0
+		a
+
+	.item
+		margin-bottom: 10px
+		span.data
+			font-size: 14px
+			font-weight: bold
+			color: #118baa
+		p
+			font-size: 14px
+			padding-top: 10px
+			line-height: 18px
+			color: #333
+			span
+				color: #118baa
+				font-weight: bold
+		a
+			font-size: 14px
+			text-transform: lowercase
+			font-weight: bold
+			color: #118baa
+	.owl-carousel .owl-stage-outer
+		background-image: url(../img/border-g.png)
+		background-position: center bottom
+		background-repeat: no-repeat
+		background-size: 100%
+	.owl-theme .owl-nav
+		position: relative
+		margin-top: 0
+		height: 42px
+		background-image: url(../img/border-g.png)
+		background-position: center bottom
+		background-repeat: no-repeat
+		background-size: 100%
+		.owl-prev
+			background-image: url(../img/border-w.png)
+			background-position: right bottom
+			background-repeat: no-repeat
+			background-size: 1px 100%
+			position: absolute
+			top: 0
+			left: 0
+			width: 50px
+			height: 42px
+			outline: 0px
+			margin: 0
+		.owl-next
+			background-image: url(../img/border-w.png)
+			background-position: left bottom
+			background-repeat: no-repeat
+			background-size: 1px 100%
+			position: absolute
+			top: 0
+			right: 0
+			width: 50px
+			height: 42px
+			outline: 0px
+			margin: 0
+		[class*=owl-]:hover
+			background-color: transparent
+			color: #118baa
+	.all
+		position: absolute
+		bottom: 19px
+		left: 60px
+		right: 60px
+		text-align: center
+		z-index: 111
+	.all-solo
+		bottom: -10px
+		left: 0
+		right: 0
+		padding: 5px 0
+		background-image: url(../img/border-g.png), url(../img/border-g.png)
+		background-position: center top, center bottom
+		background-repeat: no-repeat, no-repeat
+		background-size: 100%, 100%
+.copirate
+	font-size: 12px
+	line-height: 13px
+	padding-top: 20px
+	a
+		text-decoration: none
+
+
+
+
+.white-popup-block
+	background: #fff
+	padding: 20px 30px
+	text-align: left
+	max-width: 650px
+	margin: 40px auto
+	position: relative
+.col-m
+	float: left
+	width: 100%
+	display: block
+.row-form
+	padding: 0 15px 15px
+	border-bottom: 1px solid rgba(29, 56, 37, 0.15)
+	background-color: rgba(255, 255, 255, 1)
+.row-footer
+	padding: 15px
+.content-row
+	margin-left: 0
+	margin-right: 0
+.content
+	padding-bottom: 30px
+	p, li, span
+		text-align: justify
+		color: #000
+		text-shadow: 0.1px 0.1px #bbbbbb
+	img
+		max-width: 100%
+		height: auto
+	a
+		text-decoration: underline
+	.img-item-vrci
+		text-align: right
+		display: block
+		margin-top: 10px
+		position: relative
+		&:before
+			content: ''
+			background: url(../img/img-laer.png)
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-size: cover
+			background-position: left bottom
+		img
+			max-width: 225px
+	.img-item-vrci-h3
+		font-size: 18px
+		padding: 5px 0
+		margin-top: 10px
+	.item-vrci-ul
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			background: url(../img/border-g.png)
+			background-position: center bottom
+			background-repeat: no-repeat
+			background-size: 100%
+			text-align: left
+			font-size: 14px
+.podrob
+	font-size: 14px
+	text-transform: lowercase
+	font-weight: 700
+	color: #118baa
+.bg-column-tovar
+	.item
+		margin-bottom: 15px
+		.card-img-overlay
+			background-color: rgba(255, 255, 255, 0.8)
+			max-height: 65px
+			height: auto
+			overflow: hidden
+			transition: max-height 2s
+		.main-h1
+			font-size: 20px
+			color: #1d3825
+			text-align: center
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+		p
+			margin-bottom: 0
+		.main-cena
+			font-size: 24px
+			font-family: Obelix
+			color: red
+			span
+				font-size: 16px
+				color: #1d3825
+		.main-itis
+			span
+				font-family: Obelix
+				color: #1d3825
+		.main-btn
+			width: 100%
+			text-align: center
+	.item:hover
+		.card-img-overlay
+			max-height: 100%
+	.item:last-child
+		margin-bottom: 0
+.bg-column-h2
+	margin-left: 0
+	margin-right: 0
+	margin-top: 10px
+.small-logo-menu
+	height: 100%
+	margin: auto
+.col-column
+	transition: all .1s ease
+	.box-last-column
+		display: none
+		position: relative
+		height: 100%
+		background-color: rgba(255,255,255,.7)
+		transition: all .3s ease
+		a
+			position: absolute
+			top: 25%
+			transform: rotate(90deg)
+			font-size: 32px
+			white-space: nowrap
+			line-height: 26px
+			text-transform: uppercase
+			max-width: 300px
+		a:hover
+			color: #118baa
+.bg-column-1 
+	.box-last-column 
+		a
+			right: -67px
+.bg-column-2 
+	.box-last-column 
+		a
+			right: -127px
+.bg-column-3 
+	.box-last-column 
+		a
+			right: -101px
+.column-img-banner
+	margin: auto
+.mh-btns-left
+	position: absolute
+	right: 0
+	top: -15px
+	font-size: 35px
+	display: none
+.item-consultant
+	background-image: url(../img/border-g.png)
+	background-position: center bottom
+	background-repeat: no-repeat
+	background-size: 100%
+	padding-bottom: 15px
+	padding-top: 15px
+	.data
+		font-weight: bold
+	.title
+		font-size: 18px
+	a
+		text-decoration: underline
+		line-height: 21px
+		display: block
+/***************** videoWrapper ********************/
+.videoWrapper
+	position: relative
+	padding-bottom: 56.25%/* 16:9 */
+	padding-top: 25px
+	height: 0
+.videoWrapper iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+.desktop-video .row-video
+	margin-right: -5px!important
+	margin-left: -5px!important
+/***************** videoWrapper ********************/
+.conteiner-main>.row>.bg-column-adres
+	background-image: url(../img/adr-bg.png)
+	max-width: 350px
+	min-width: 300px
+	background-position: center
+	background-size: cover
+	box-shadow: 0px 0px 1px 0px red
+	.bg
+		background-color: rgba(255, 255, 255, 0.75)
+		height: 100%
+	h1, h1 span
+		color: #333
+	h1
+		background-position: bottom center
+		margin-top: 0
+		margin-bottom: 10px
+		background-image: url(../img/border-g-adr.png)
+	h2
+		background-image: none
+		padding: 0
+		margin: 0
+		font-size: 20px
+		color: #333
+		span
+			color: #333
+	.adres-pre-item
+		background-position: bottom center
+		background-image: url(../img/border-g-adr.png)
+		background-size: 100% 1px
+		background-repeat: no-repeat
+		a
+			color: #fff
+			font-weight: 100
+			min-width: 30%
+			display: block
+		.bg-activ
+			padding: 0px 10px 0px 0
+			margin: 10px 0 10px 0
+		.bg-activ:hover
+			background-image: url(../img/rows-adr-activ.png)
+			background-size: 10px 100%
+			background-repeat: no-repeat
+			background-position: right center
+		.activ
+			background-image: url(../img/rows-adr-activ.png)
+			background-size: 10px 100%
+			background-repeat: no-repeat
+			background-position: right center
+		p
+			color: #333
+			font-size: 13px
+.bg-column-adres-item
+	box-shadow: 0px 0px 1px 0px red
+	.bg
+		background-color: rgba(255, 255, 255, 1)
+		height: 100%
+	.item
+		background-position: bottom center
+		background-image: url(../img/border-g-adr.png)
+		background-size: 90% 1px
+		background-repeat: no-repeat
+		margin-bottom: 10px
+		padding-bottom: 10px
+		h2
+			font-size: 21px
+		.img
+			margin-left: -15px
+			margin-right: -15px
+			display: block
+		.date
+			display: block
+			text-align: center
+			margin-bottom: 10px
+	.item-page
+		margin-bottom: 10px
+		padding-bottom: 0px
+		min-height: 100vh
+		background-position: center 100%
+	.content
+		padding-top: 20px
+		p
+			display: block
+			margin: 0
+			padding: 0
+		b
+			padding-bottom: 10px
+			color: #118baa
+/***************** mapWrapper ********************/
+.mapWrapper
+	position: relative
+	padding-bottom: 40%/* 16:9 */
+	padding-top: 25px
+	height: 0
+.mapWrapper iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+.desktop-video .row-video
+	margin-right: -5px!important
+	margin-left: -5px!important
+/***************** videoWrapper ********************/
+.bg-column-compani-menu
+	background: #a7a7a7
+	max-width: 100vh
+	.bg
+		background-color: rgba(255, 255, 255, 0)
+	.compani-pre-item
+		list-style: none
+		margin: 0
+		padding: 0
+		display: block
+		.item
+			list-style: none
+			margin: 0
+			padding: 0
+			display: block
+			a
+				text-transform: uppercase
+				padding: 23px 10px 23px 25px
+				display: block
+				border-left: 2px solid #a7a7a7
+				border-right: 2px solid #a7a7a7
+				margin: 5px 0
+				box-shadow: inset 1px 1px 9px 0px #d4d4d4
+		.item.active, .item:hover
+			background-color: #fff
+			a
+				font-weight: bold
+				color: #118baa
+.company
+	.row-footer,.row-menu,.row-logo
+		background: #eaeaea
+.bg-column-company-item
+	.item-page
+		.img
+			position: relative
+			margin-left: -15px
+			margin-right: -15px
+			display: block
+		h2
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			background-image: none
+			background-color: rgba(51, 51, 51, 0.6)
+			color: #fff
+			padding: 15px
+.footer
+	width: 100%
+.panel-default
+	div.collapse
+		display: none
+	div.show
+		display: block
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
